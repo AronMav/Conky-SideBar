@@ -1,10 +1,13 @@
+![alt text](https://raw.githubusercontent.com/TheodoreBellas/Conky-SideBar/master/Sidebar-Conky_Rc.png)
+
+
 # Conky-SideBar
 This is a small system monitor written for Conky that I found on DeviantArt (source below) and modified to better suit my needs as a Linux Mint 18.2 user.
 
 
 # Original Version
 
-The original version is here: http://wim66.deviantart.com/gallery/   (many thanks to wim66!)
+The original version is here: https://wim66.deviantart.com/art/Sidebar-Conky-screen-size-1920x1080-535485928   (many thanks to wim66!)
 
 I modified this a little bit to work better with Linux Mint 18.2 with the Cinnamon desktop, but with a little know-how
 you should be able to do the same to fit whatever desktop manager you're using.
@@ -15,6 +18,7 @@ but you can change this by changing the "own_window_type" property to "normal", 
 Play with it a little and see what suits you best!
 
 # Fonts
+
 The fonts used for this are included in the INSTALL_FONTS directory (Adele and Adele Bold, for reference).
 
 # Modifications
