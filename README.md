@@ -1,5 +1,4 @@
-![alt text](https://raw.githubusercontent.com/TheodoreBellas/Conky-SideBar/master/Sidebar-Conky_Rc.png)
-
+<img align="center" src="https://raw.githubusercontent.com/TheodoreBellas/Conky-SideBar/master/Sidebar-Conky_Rc.png" alt="Conky-Sidebar Image">
 
 # Conky-SideBar
 This is a small system monitor written for Conky that I found on DeviantArt (source below) and modified to better suit my needs as a Linux Mint 18.2 user.
