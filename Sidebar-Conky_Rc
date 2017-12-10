@@ -56,6 +56,8 @@ default_graph_size 40,220
 show_graph_scale no
 show_graph_range no
 
+short_units yes
+
 override_utf8_locale yes
 use_xft yes
 xftfont ADELE:normal:size=13
@@ -77,7 +79,6 @@ ${goto 10}Host:${alignr 5}${exec hostname}
 ${goto 10}Uptime:${alignr 5}$uptime
 #
 # cpu load/temp/graph
-
 ${font ADELE:bold:size=15}${alignc}Processors${font}
 ${goto 10}${voffset 5}CPU1: ${cpu cpu1}%${alignr 10}${exec sensors|grep 'Core 0'|awk '{print $3}'}
 ${goto 10}${voffset -5}${color2}${cpugraph cpu1 25,220 66241C FF5A45}
@@ -113,9 +114,9 @@ ${goto 10}${voffset -2}${top_mem name 4}${alignr 10}${top mem 4}%
 ${voffset -5}${font ADELE:bold:size=15}${color1}${alignc}Network${font}
 #${voffset 5}${goto 10}Network${alignr 10}SSID: ${wireless_essid enp0s25}
 #${goto 10}Signal:${goto 70}${color2}${wireless_link_bar wlan0}${color1}${alignr 10}${wireless_link_qual_perc enp0s25}%
-${goto 10}Internal: ${alignr 10}${addr enp0s25}
-${goto 10}External: ${alignr 10}${exec curl ipinfo.io/ip}
-${voffset 5}${goto 10}${color1}Upspeed:${alignr 10}${upspeed enp0s25}
+${goto 10}Internal: ${font ADELE:bold:14}${alignr 10}${addr enp0s25}
+${font}${goto 10}External: ${font ADELE:bold:14}${alignr 10}${exec curl ipinfo.io/ip}
+${font}${voffset 5}${goto 10}${color1}Upspeed:${alignr 10}${upspeed enp0s25}
 ${goto 10}${voffset 0}Total up:${alignr 10}${totalup enp0s25}
 ${goto 10}${color2}${upspeedgraph enp0s25 25,220 66241C FF5A45 100 -l}
 ${goto 10}${color1}Down:$color1${alignr 10}${downspeed enp0s25}
@@ -123,3 +124,11 @@ ${goto 10}Total down:${alignr 10}${totaldown enp0s25}
 ${goto 10}${color2}${downspeedgraph enp0s25 25,220 66241C FF5A45 100 -l}
 ${voffset -30}
 #
+
+
+${voffset -5}${font ADELE:bold:size=15}${color1}${alignc}Disk Usage${font}
+${voffset 4}${goto 10}Size:${alignr 10}${font ADELE:bold:14}${color1}${exec df -H -B GB / | awk 'END{print $2}' }
+${font}${voffset 4}${goto 10}Used:${alignr 10}${font ADELE:bold:14}${color1}${exec df -H -B GB / | awk 'END{print $3}' } (${fs_used_perc}%)
+${font}${voffset 4}${goto 10}Free:${alignr 10}${font ADELE:bold:14}${color1}${exec df -H -B GB / | awk 'END{print $4}' }
+#${goto 10}${voffset -5}${color2}${fs_bar 25,220  /}
+${voffset -40}
