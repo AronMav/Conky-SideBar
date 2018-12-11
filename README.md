@@ -33,3 +33,21 @@ have been positionally changed and bolded for clarity.
 
 The original CPU graphs only contained entries for dual-core processors, I updated it such that 4 CPU's are shown. If you're running 
 a dual-core processor, I'd suggest you comment out the section marked as "third and fourth CPU cores" (or upgrade your processor, jeez).
+
+# Setup
+```bash
+cd /tmp/
+git clone https://github.com/TheodoreBellas/Conky-SideBar
+cd Conky-SideBar
+cp INSTALL_FONTS/* ~/.fonts/
+mkdir -p ~/.conky
+cp Sidebar-Conky_Rc ~/.conky
+#
+net_device=$(ip addr | awk '/state UP/ {print $2}' | sed 's/.$//')
+sed -i "s/enp0s25/${net_device}/g" $HOME/.conky/Sidebar-Conky_Rc
+```
+
+# Start
+```bash
+conky -q -c ~/.conky/Sidebar-Conky_Rc &
+```
