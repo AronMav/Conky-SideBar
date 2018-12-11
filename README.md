@@ -42,6 +42,8 @@ cd Conky-SideBar
 cp INSTALL_FONTS/* ~/.fonts/
 mkdir -p ~/.conky
 cp Sidebar-Conky_Rc ~/.conky
+cd ..
+rm -rf /tmp/Conky-SideBar
 #
 net_device=$(ip addr | awk '/state UP/ {print $2}' | sed 's/.$//')
 sed -i "s/enp0s25/${net_device}/g" $HOME/.conky/Sidebar-Conky_Rc
