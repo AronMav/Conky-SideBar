@@ -29,9 +29,9 @@ update_interval 1
 cpu_avg_samples 1
 format_human_readable
 
-alignment top_middle
-gap_x -720
-gap_y 0
+alignment top_right
+gap_x 22
+gap_y 22
 minimum_size 240 700
 own_window yes
 own_window_type panel	# options are: normal/override/dock/desktop/panel
