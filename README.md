@@ -53,3 +53,8 @@ sed -i "s/enp0s25/${net_device}/g" $HOME/.conky/Sidebar-Conky_Rc
 ```bash
 conky -q -c ~/.conky/Sidebar-Conky_Rc &
 ```
+
+# Add autostartup
+```
+conky -q -c /home/<userName>/.conky/Sidebar-Conky_Rc
+```
