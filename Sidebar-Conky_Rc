@@ -87,7 +87,7 @@ ${goto 10}${voffset -5}${color2}${cpugraph cpu2 25,220 66241C FF5A45}
 #
 # Third and Fourth CPU cores
 #
-${goto 10}${voffset 5}CPU3: ${cpu cpu3}%${alignr 10}${exec sensors|grep 'Core 2'|awk '{print $3}'}
+${goto 10}${voffset 5}${color1}CPU3: ${cpu cpu3}%${alignr 10}${exec sensors|grep 'Core 2'|awk '{print $3}'}
 ${goto 10}${voffset -5}${color2}${cpugraph cpu3 25,220 66241C FF5A45}
 ${goto 10}${voffset 0}${color1}CPU4: ${cpu cpu4}%${alignr 10}${exec sensors|grep 'Core 3'|awk '{print $3}'}
 ${goto 10}${voffset -5}${color2}${cpugraph cpu4 25,220 66241C FF5A45}
